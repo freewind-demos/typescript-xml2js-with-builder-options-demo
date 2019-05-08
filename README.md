@@ -1,18 +1,9 @@
-TypeScript Hello World Demo
+TypeScript "xml2js" Demo
 ===========================
+
+使用`xml2js`将xml与js的object进行互转。
 
 ```
 npm install
 npm run demo
 ```
-
-Note:
-
-`esModuleInterop` is recommended to set to `true`,
-since we can have consistent importing syntax with babel,
-always use:
-
-```
-import some from 'some'
-```
-
