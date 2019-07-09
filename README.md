@@ -1,7 +1,5 @@
-TypeScript "xml2js" Demo
-===========================
-
-使用`xml2js`将xml与js的object进行互转。
+TypeScript "xml2js" with Builder Options Demo
+==============================================
 
 ```
 npm install

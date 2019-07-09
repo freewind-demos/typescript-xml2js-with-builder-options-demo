@@ -1,20 +1,29 @@
-import {parseString, Builder} from 'xml2js';
-
-function parseXmlToObject() {
-  console.log('--- parseXmlToObject ---');
-  parseString(` <name>hello</name>`, (err, result) => {
-    console.log(err, result);
-    // result:
-    // { name: 'xml2js' }
-  })
-}
+import {Builder} from 'xml2js';
 
 function buildObjectToXml() {
   console.log('--- buildObjectToXml ---');
-  const builder = new Builder()
-  const xml = builder.buildObject({name: 'world'})
+  const options = {
+    headless: true,
+    rootName: 'item',
+    renderOpts: {
+      'pretty': true,
+      'indent': '    ',
+      'newline': '\r\n',
+      'cdata': true
+    }
+  }
+  const builder = new Builder(options)
+  const xml = builder.buildObject({
+    name: 'world',
+    age: 1000000
+  })
   console.log(xml)
+
+  // Output:
+  // <item>
+  //     <name>world</name>
+  //     <age>1000000</age>
+  // </item>
 }
 
-parseXmlToObject();
 buildObjectToXml();
