@@ -5,7 +5,7 @@
   "devDependencies": {
     "@types/xml2js": "0.4.4",
     "ts-node": "7.0.1",
-    "typescript": "3.2.2"
+    "typescript": "5.3.3"
   },
   "dependencies": {
     "xml2js": "0.4.19"
